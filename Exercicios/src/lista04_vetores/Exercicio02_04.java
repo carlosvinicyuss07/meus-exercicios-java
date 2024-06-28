@@ -16,19 +16,20 @@ public class Exercicio02_04 {
             numeros[i] = ler.nextInt();
         }
 
+        boolean isRepetido;
         for (int i = 0; i < numeros.length -1; i++) {
-            for (int j = 1; j < numeros.length; j++) {
+        isRepetido = false;
+            for (int j = 0; j <= (i - 1) ; j++) {
+                isRepetido = false;
                 if (numeros[i] == numeros[j]) {
-                    numeros[j] = 0;
+                    isRepetido = true;
+                    break;
                 }
             }
-        }
 
-        for (int elemento: numeros) {
-            if (elemento == 0) {
-                continue;
+            if (!isRepetido) {
+                System.out.print(numeros[i] + " ");
             }
-            System.out.println(elemento);
         }
     }
 }
