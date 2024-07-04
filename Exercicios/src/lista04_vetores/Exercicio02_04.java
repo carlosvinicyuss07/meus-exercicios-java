@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Exercicio02_04 {
     public static void main(String[] args) {
         Scanner ler = new Scanner(System.in);
-        int[] numeros = new int[5];
+        int[] numeros = new int[20];
 
         for (int i = 0; i < numeros.length; i++) {
             System.out.print("Digite o " + (i+1) + "° número: ");
@@ -20,7 +20,6 @@ public class Exercicio02_04 {
         for (int i = 0; i < numeros.length -1; i++) {
         isRepetido = false;
             for (int j = 0; j <= (i - 1) ; j++) {
-                isRepetido = false;
                 if (numeros[i] == numeros[j]) {
                     isRepetido = true;
                     break;
